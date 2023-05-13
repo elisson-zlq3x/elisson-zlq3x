@@ -1,16 +1,24 @@
-### Hi there 👋
+```python
+class Vida:
+    def __init__(self):
+        self.ensinamentos = ["lição 1", "lição 2", "lição 3"]
 
-<!--
-**elisson-zlq3x/elisson-zlq3x** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+class Pessoa:
+    def __init__(self, gosta_de_aprender):
+        self.gosta_de_aprender = gosta_de_aprender
+        self.feliz = False
 
-Here are some ideas to get you started:
+    def aprender(self, ensinamento):
+        if self.gosta_de_aprender:
+            print(f"Aprendendo: {ensinamento}")
+            self.feliz = True
+        else:
+            print("Não estou interessado em aprender agora.")
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+vida = Vida()
+pessoa = Pessoa(True)
+
+for ensinamento in vida.ensinamentos:
+    pessoa.aprender(ensinamento)
+
+print(f"A pessoa está feliz? {'Sim' if pessoa.feliz else 'Não'}")
